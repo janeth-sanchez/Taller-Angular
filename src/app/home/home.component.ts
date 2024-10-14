@@ -1,23 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { info } from 'console';
+import { CardComponent } from "../components/card/card.component";
 
 @Component({
   selector: 'ui-home',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-@Input() image!: string;
-@Input() title!: string;
-@Input() info!: string;
-@Input() text_btn!: string;
-@Input() clickevent!:() => void;
-
-onClick() 
-{
-  this.clickevent();
-}
+  VerPerfil(){
+    alert("Ver Perfil");
+  }
+  ConocerMas(){
+    alert("Conocer Mas");
+  }
 } 
