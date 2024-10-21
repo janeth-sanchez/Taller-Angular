@@ -1,16 +1,16 @@
 <div class="card">
-    @if ('data' in data){
-    @if (data.data.img) {
+    @if ('data'){
+    @if ('img') {
         <div class="card-header">
-            <img [src]="data.data.img" alt="" class="img">
+            <img [src]="img" alt="" class="img">
             </div>
     }
     <div class="card-body">
-    <h2 class="title">{{data.data.name}}</h2>
+    <h2 class="title">{{name}}</h2>
     <input type="text" class="input" (change)="onChange($event)">
-    <p class="info">{{data.data.description}}</p>
-    @if (data.data.price) {
-            <p class="info">{{data.price}}</p>
+    <p class="info">{{"description"}}</p>
+    @if ('price') {
+            <p class="info">{{"price"}}</p>
         }
     </div>
 }

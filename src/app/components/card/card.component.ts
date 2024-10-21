@@ -19,6 +19,9 @@ export class CardComponent {
   @Input() data!:Data| Usuario;
   @Input() clickevent!:() => void;
   @Input() productos: any; 
+img: any;
+name: any;
+description: any;
 
   
   onChange(event:any){

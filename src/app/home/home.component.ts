@@ -1,24 +1,25 @@
-import { Component, Input } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { info } from 'console';
+import { Component, NgModule } from '@angular/core';
+import { CommonModule} from '@angular/common';
 import { CardComponent } from "../components/card/card.component";
+import { FormsModule } from '@angular/forms';
 
 @Component({
 selector: 'ui-home',
 standalone: true,
-imports: [CardComponent],
+imports: [CardComponent, FormsModule, CommonModule],
 templateUrl: './home.component.html',
 styleUrl: './home.component.css'
 })
 export class HomeComponent {
-    title = 'taller';
-    VerPerfil(){
-        alert("Ver Perfil");
-    }
-    ConocerMas(){
-        alert("Conocer Mas");
-    }
-    goProducts(){
-        window.location.href = "/products" 
-    }
+email: string ='';
+password: string= '';
+login(user:string, password:string){
+
+
+
+    console.log(`User${user} Password${password}`)
+}
+
+
 } 
+
